@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>YouTube UI Clone</title>
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+}
+
+/* ===== HEADER ===== */
+header {
+  height: 56px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.burger {
+  font-size: 22px;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+.logo span {
+  color: #000;
+}
+
+.search {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search input {
+  width: 60%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 2px 0 0 2px;
+}
+
+.search button {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background: #f1f1f1;
+  cursor: pointer;
+}
+
+/* ===== LAYOUT ===== */
+.container {
+  display: flex;
+  margin-top: 56px;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 220px;
+  background: #fff;
+  height: calc(100vh - 56px);
+  border-right: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+.sidebar a:hover {
+  background: #f2f2f2;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+.videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.video {
+  background: #fff;
+  cursor: pointer;
+}
+
+.thumbnail {
+  height: 140px;
+  background: #ccc;
+}
+
+.video-info {
+  padding: 10px;
+}
+
+.video-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.video-channel {
+  font-size: 12px;
+  color: #555;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="burger">☰</div>
+  <div class="logo">You<span>Tube</span></div>
+
+  <div class="search">
+    <input type="text" placeholder="Search">
+    <button>🔍</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <a href="#">🏠 Home</a>
+    <a href="#">🎬 Shorts</a>
+    <a href="#">📺 Subscriptions</a>
+    <a href="#">📚 Library</a>
+    <a href="#">🕒 History</a>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+    <div class="videos">
+
+      <div class="video">
+        <div class="thumbnail"></div>
+        <div class="video-info">
+          <div class="video-title">Video Title 1</div>
+          <div class="video-channel">Channel Name</div>
+        </div>
+      </div>
+
+      <div class="video">
+        <div class="thumbnail"></div>
+        <div class="video-info">
+          <div class="video-title">Video Title 2</div>
+          <div class="video-channel">Channel Name</div>
+        </div>
+      </div>
+
+      <div class="video">
+        <div class="thumbnail"></div>
+        <div class="video-info">
+          <div class="video-title">Video Title 3</div>
+          <div class="video-channel">Channel Name</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
